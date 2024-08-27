@@ -58,5 +58,8 @@ function extractCompanyId() {
   return '';
 }
 
-// Continuously monitor the DOM and reapply the link as needed
-setInterval(addLinkToPeopleTab, 1000);
+// Immediately run the function when the script is loaded to avoid initial delay
+addLinkToPeopleTab();
+
+// Continuously monitor the DOM and reapply the link more frequently
+setInterval(addLinkToPeopleTab, 500);
